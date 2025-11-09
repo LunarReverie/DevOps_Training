@@ -20,6 +20,11 @@ pipeline {
             stage('Deploy Production') {
                   steps {
                         echo "Deploying in Production Area"
+                        stage('Build') {
+                  steps {
+                        echo 'Building Sample Maven Project'
+                  }
+            }
                   }
             }
       }
